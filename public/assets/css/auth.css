@@ -1,0 +1,49 @@
+#auth-left {
+    background-color: #EAEEF6;
+}
+
+#auth-left .card-left {
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
+    padding: 2rem;
+
+    border-top: 4px solid #324052;
+    background-color: #F4F7FC;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media (min-width:992px) {
+    #auth-left .card-left {
+        width: 25vw;
+        height: 60vh;
+        margin: auto 0 auto auto;
+        padding: 3rem;
+        
+        border-top: 0;
+        background-color: #F4F7FC;
+        border-radius: 20px 0px 0px 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+}
+
+#auth #auth-left .btn-login {
+    box-shadow: 0px 4px 4px rgba(93, 139, 244, 0.25);
+}
+
+#auth #auth-left .title-input {
+    margin-bottom: .5rem;
+
+    list-style: none;
+    font-size: .7rem;
+    font-weight: 600;
+    color: #9F9F9F;
+}
+
+#auth-right .card-right {
+    width: 25vw;
+    height: 60vh;
+    background-color: #324052;
+    border-radius: 0px 20px 20px 0px;
+}
