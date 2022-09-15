@@ -1,6 +1,14 @@
+import { useState } from "react";
+
 import DataTable from "react-data-table-component";
 
+import DetailComp from "./detail";
+import ModalComp from "./modal";
+import EditComp from "./edit";
+
 export default function ManagementClientComp() {
+    const [isEdit, setIsEdit] = useState(false)
+
     const columns = [
         {
             name: "No",
@@ -8,19 +16,9 @@ export default function ManagementClientComp() {
             selector: row => row.no
         },
         {
-            name: "Client Code",
-            width: "130px",
-            selector: row => row.clientCode
-        },
-        {
             name: "Name",
             width: "200px",
-            selector: row => row.name
-        },
-        {
-            name: "Fullname",
-            width: "200px",
-            selector: row => row.fullname
+            selector: row => row.regionalName
         },
         {
             name: "Status",
@@ -34,86 +32,60 @@ export default function ManagementClientComp() {
     const data = [
         {
             no: 1,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
+            regionalName: "BANDUNG",
             status: "Active"
         },
         {
             no: 2,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
+            regionalName: "JAKARTA 1",
             status: "Active"
         },
         {
             no: 3,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
+            regionalName: "JAKARTA 2",
             status: "Active"
         },
         {
             no: 4,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
-            status: "Active"
-        },
-        {
-            no: 5,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
-            status: "Active"
-        },
-        {
-            no: 6,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
-            status: "Active"
-        },
-        {
-            no: 7,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
-            status: "Active"
-        },
-        {
-            no: 8,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
-            status: "Active"
-        },
-        {
-            no: 9,
-            clientCode: "0203",
-            name: "Ace Oldfields, PT",
-            fullname: "Ace Oldffields, PT",
+            regionalName: "JAKARTA 3",
             status: "Active"
         }
     ]
 
     return (
-        <div className="card fs-7">
-            <div className="card-body">
-                <div className="d-flex">
-                    <div className="ms-auto mb-1"><input className="form-control" placeholder="Search by Client Code" /></div>
+        <div className="row">
+            <div className="col-12 col-md-8">
+                <div className="card">
+                    <div className="card-body">
+                        <div className="d-flex align-items-center pb-1">
+                            <div className="ms-auto">
+                                <input className="form-control" placeholder="Search by Regional Office Name" />
+                            </div>
+                            <div className="ms-2">
+                                <div role="button" data-bs-toggle="modal" data-bs-target="#regionalForm" className="btn-sm btn-primary py-2">+ Create Regional Office</div>
+                                <ModalComp />
+                            </div>
+                        </div>
+                        <DataTable
+                            columns={columns}
+                            data={data}
+                            noHeader
+                            defaultSortField="id"
+                            defaultSortAsc={false}
+                            fixedHeader
+                            width="auto"
+                            highlightOnHover
+                            pagination
+                        />
+                    </div>
                 </div>
-                <DataTable
-                    columns={columns}
-                    data={data}
-                    noHeader
-                    defaultSortField="id"
-                    defaultSortAsc={false}
-                    fixedHeader
-                    width="auto"
-                    highlightOnHover
-                    pagination
-                />
+            </div>
+            <div className="col-12 col-md-4">
+                {isEdit ? (
+                    <EditComp setIsEdit={setIsEdit} />
+                ) : (
+                    <DetailComp setIsEdit={setIsEdit} />
+                )}
             </div>
         </div>
     )
