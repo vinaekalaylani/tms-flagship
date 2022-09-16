@@ -1,13 +1,6 @@
-import { useState } from "react";
-
 import DataTable from "react-data-table-component";
-import DetailComp from "./detail";
-import EditCommp from "./edit";
-import ModalComp from "./modal";
 
 export default function ManagementUserRoleComp() {
-    const [isEdit, setIsEdit] = useState(false)
-
     const columns = [
         {
             name: "No",
@@ -15,45 +8,79 @@ export default function ManagementUserRoleComp() {
             selector: row => row.no
         },
         {
-            name: "User Role Name",
-            width: "200px",
-            selector: row => row.roleName
-        },
-        {
-            name: "Level",
-            width: "200px",
-            selector: row => row.level
-        },
-        {
-            name: "Status",
-            width: "120px",
-            selector: row => (
-                <div className="badge bg-primary">{row.status}</div>
-            )
+            name: "Branch Name",
+            width: "250px",
+            selector: row => row.branch
         }
     ]
 
     const data = [
         {
             no: 1,
-            roleName: "CPC Cashier",
-            level: "Cashier",
-            status: "Active"
+            branch: "BANDUNG AH NASUTION - 0354"
+        },
+        {
+            no: 2,
+            branch: "BANDUNG AA - 0005"
+        },
+        {
+            no: 3,
+            branch: "BANDUNG DEWI SARTIKA - 0286"
+        },
+        {
+            no: 4,
+            branch: "TASIKMALAYA - 0100"
+        },
+        {
+            no: 5,
+            branch: "DENPASAR GAJAH MADA - 0017"
+        },
+        {
+            no: 6,
+            branch: "DENPASAR RENON - 0368"
+        },
+        {
+            no: 7,
+            branch: "KUTA - 0556"
+        },
+        {
+            no: 8,
+            branch: "MATARAM - 0052"
+        },
+        {
+            no: 9,
+            branch: "JAKARTA CUT MUTIAH - 0230"
+        },
+        {
+            no: 10,
+            branch: "JAKARTA JATINEGARA - 1122"
+        },
+        {
+            no: 11,
+            branch: "JAKARTA KRAMAT - 0335"
+        },
+        {
+            no: 12,
+            branch: "JAKARTA OTISTA - 0340"
+        },
+        {
+            no: 13,
+            branch: "JAKARTA TANJUNG PRIOK - 0186"
+        },
+        {
+            no: 14,
+            branch: "JAKARTA VETERAN - 0329"
         }
     ]
 
     return (
         <div className="row">
-            <div className="col-12 col-md-8">
+            <div className="col-12">
                 <div className="card">
                     <div className="card-body">
                         <div className="d-flex align-items-center pb-1">
                             <div className="ms-auto">
                                 <input className="form-control" placeholder="Search by User Role" />
-                            </div>
-                            <div className="ms-2">
-                                <div className="btn-sm btn-primary py-2" role="button" data-bs-toggle="modal" data-bs-target="#userroleForm">+ Create User Role</div>
-                                <ModalComp />
                             </div>
                         </div>
                         <DataTable
@@ -65,17 +92,11 @@ export default function ManagementUserRoleComp() {
                             fixedHeader
                             width="auto"
                             highlightOnHover
+                            selectableRows
                             pagination
                         />
                     </div>
                 </div>
-            </div>
-            <div className="col-12 col-md-4">
-                {isEdit ? (
-                    <EditCommp setIsEdit={setIsEdit} />
-                ) : (
-                    <DetailComp setIsEdit={setIsEdit} />
-                )}
             </div>
         </div>
     )
