@@ -34,27 +34,13 @@ export default function FilterComp({ setIsFilter }) {
             <div className="col-12 col-md-8 col-lg-6">
                 <div className="card">
                     <form onSubmit={handleSubmit}>
-                        <div className="card-header bg-primary text-white p-3">Search</div>
+                        <div className="card-header bg-primary text-white p-3">Search by Bank Product</div>
                         <div className="card-body text-secondary fs-7">
                             <div className="d-block d-sm-flex align-items-center mb-2">
-                                <div className="col-sm-4 my-2 my-sm-0">Branch</div>
+                                <div className="col-sm-4 my-2 my-sm-0">Bank Product</div>
                                 <div className="col-sm-8">
                                     <Select options={options} styles={style} />
                                 </div>
-                            </div>
-                            <div className="d-block d-sm-flex align-items-center mb-2">
-                                <div className="col-sm-4 my-2 my-sm-0">Machine</div>
-                                <div className="col-sm-8">
-                                    <Select options={options} styles={style} />
-                                </div>
-                            </div>
-                            <div className="d-block d-sm-flex align-items-center mb-2">
-                                <div className="col-sm-4 my-2 my-sm-0">Start Date</div>
-                                <input className="form-control" type="date" />
-                            </div>
-                            <div className="d-block d-sm-flex align-items-center mb-2">
-                                <div className="col-sm-4 my-2 my-sm-0">End Date</div>
-                                <input className="form-control" type="date" />
                             </div>
                         </div>
                         <div className="card-footer p-3">
