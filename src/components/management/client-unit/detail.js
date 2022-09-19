@@ -17,7 +17,7 @@ export default function DetailComp({ setIsEdit }) {
                         <div>Name</div>
                     </div>
                     <div className="col-6">
-                        <div>: Britama Bisnis</div>
+                        <div>: Britama SME</div>
                     </div>
                 </div>
                 <div className="d-flex mb-3">
@@ -25,7 +25,31 @@ export default function DetailComp({ setIsEdit }) {
                         <div>Code</div>
                     </div>
                     <div className="col-6">
-                        <div>: Britama Bisnis</div>
+                        <div>: B1</div>
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6">
+                        <div>Category</div>
+                    </div>
+                    <div className="col-6">
+                        <div>: BritAma</div>
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6">
+                        <div>Acc. Type</div>
+                    </div>
+                    <div className="col-6">
+                        <div>: S</div>
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6">
+                        <div>Business</div>
+                    </div>
+                    <div className="col-6">
+                        <div>: false</div>
                     </div>
                 </div>
                 <div className="d-flex mb-3">
