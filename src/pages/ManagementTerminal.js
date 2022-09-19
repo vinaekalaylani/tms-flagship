@@ -1,18 +1,13 @@
-import { useState } from "react";
-import ManagementTerminalComp from "../components/management/terminal";
-import FilterComp from "../components/management/terminal/filter";
-
 import NavbarComp from "../components/navbar";
+import ManagementTerminalComp from "../components/management/terminal";
 
 export default function ManagementTerminal ({ handleSidebar }) {
-    const [isFilter, setIsFilter] = useState(true)
-
     return (
         <div id="main">
-            <NavbarComp handleSidebar={handleSidebar} title="Terminal"/>
+            <NavbarComp handleSidebar={handleSidebar} title="Card Variant"/>
             <div className="page-content">
                 <section>
-                    {isFilter ? <FilterComp setIsFilter={setIsFilter} /> : <ManagementTerminalComp />}
+                    <ManagementTerminalComp />
                 </section>
             </div>
         </div>

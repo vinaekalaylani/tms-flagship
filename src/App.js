@@ -38,7 +38,7 @@ export default function App() {
         <Route path="/management-user-allocation" element={<ManagementUserRole handleSidebar={handleSidebar}/>} />
         <Route path="/management-user" element={<ManagementUser handleSidebar={handleSidebar}/>} />
         <Route path="/management-bank-product" element={<ManagementClientUnit handleSidebar={handleSidebar}/>} />
-        <Route path="/management-card-unit" element={<ManagementTerminal handleSidebar={handleSidebar}/>} />
+        <Route path="/management-card-variant" element={<ManagementTerminal handleSidebar={handleSidebar}/>} />
         <Route path="/management-product-variant" element={<ManagementCurrency handleSidebar={handleSidebar}/>} />
         {/* Reporting */}
         <Route path="/reporting-transaction" element={<ReportingProcess handleSidebar={handleSidebar}/>} />

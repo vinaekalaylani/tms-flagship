@@ -1,14 +1,12 @@
 import { useState } from "react";
 
 import DataTable from "react-data-table-component";
-
 import DetailComp from "./detail";
 import ModalComp from "./modal";
 import EditComp from "./edit";
 
 export default function ManagementTerminalComp() {
     const [isEdit, setIsEdit] = useState(false)
-    const [isEditBranch, setIsEditBranch] = useState(false)
 
     const columns = [
         {
@@ -17,9 +15,14 @@ export default function ManagementTerminalComp() {
             selector: row => row.no
         },
         {
-            name: "Terminal Name",
+            name: "Name",
             width: "200px",
-            selector: row => row.terminalName
+            selector: row => row.name
+        },
+        {
+            name: "Code",
+            width: "200px",
+            selector: row => row.code
         },
         {
             name: "Status",
@@ -33,7 +36,26 @@ export default function ManagementTerminalComp() {
     const data = [
         {
             no: 1,
-            terminalName: "T001",
+            name: "Britama Bisnis",
+            code: "Britama Bisnis",
+            status: "Active"
+        },
+        {
+            no: 2,
+            name: "Britama Black",
+            code: "Britama Black",
+            status: "Active"
+        },
+        {
+            no: 3,
+            name: "Britama Series Basket",
+            code: "Britama Series Basket",
+            status: "Active"
+        },
+        {
+            no: 4,
+            name: "Britama Series Gentleman",
+            code: "Britama Series Gentleman",
             status: "Active"
         }
     ]
@@ -48,7 +70,7 @@ export default function ManagementTerminalComp() {
                                 <input className="form-control" placeholder="Search by Terminal Name" />
                             </div>
                             <div className="ms-2">
-                                <div role="button" data-bs-toggle="modal" data-bs-target="#terminalForm" className="btn-sm btn-primary py-2">+ Create Terminal </div>
+                                <div role="button" data-bs-toggle="modal" data-bs-target="#cardForm" className="btn-sm btn-primary py-2">+ Create Card Variant </div>
                                 <ModalComp />
                             </div>
                         </div>
@@ -68,11 +90,7 @@ export default function ManagementTerminalComp() {
             </div>
             <div className="col-12 col-md-4">
                 {isEdit ? (
-                    <EditComp 
-                        setIsEdit={setIsEdit}
-                        isEditBranch={isEditBranch}
-                        setIsEditBranch={setIsEditBranch}
-                    />
+                    <EditComp setIsEdit={setIsEdit} />
                 ) : (
                     <DetailComp setIsEdit={setIsEdit} />
                 )}

@@ -57,8 +57,8 @@ export default function SidebarComp({ handleSidebar }) {
                 <div role="button" onClick={() => navigate("/management-bank-product")} className={location.pathname === "/management-bank-product" ? "submenu-item active py-3" : "submenu-item py-3"}>
                   <div>Bank Product</div>
                 </div>
-                <div role="button" onClick={() => navigate("/management-card-unit")} className={location.pathname === "/management-card-unit" ? "submenu-item active py-3" : "submenu-item py-3"}>
-                  <div>Card Unit</div>
+                <div role="button" onClick={() => navigate("/management-card-variant")} className={location.pathname === "/management-card-variant" ? "submenu-item active py-3" : "submenu-item py-3"}>
+                  <div>Card Variant</div>
                 </div>
                 <div role="button" onClick={() => navigate("/management-product-variant")} className={location.pathname === "/management-product-variant" ? "submenu-item active py-3" : "submenu-item py-3"}>
                   <div>Product Variant</div>

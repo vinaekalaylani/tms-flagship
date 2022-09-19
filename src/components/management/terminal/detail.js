@@ -14,18 +14,18 @@ export default function DetailComp({ setIsEdit }) {
             <div className="card-body fs-7 text-secondary">
                 <div className="d-flex mb-3">
                     <div className="col-6">
-                        <div>Terminal Code</div>
+                        <div>Name</div>
                     </div>
                     <div className="col-6">
-                        <div>: CPM</div>
+                        <div>: Britama Bisnis</div>
                     </div>
                 </div>
                 <div className="d-flex mb-3">
                     <div className="col-6">
-                        <div>Terminal Name</div>
+                        <div>Code</div>
                     </div>
                     <div className="col-6">
-                        <div>: T001</div>
+                        <div>: Britama Bisnis</div>
                     </div>
                 </div>
                 <div className="d-flex mb-3">

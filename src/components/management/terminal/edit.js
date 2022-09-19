@@ -1,15 +1,6 @@
-export default function EditComp({ setIsEdit, isEditBranch, setIsEditBranch }) {
+export default function EditComp({ setIsEdit }) {
     const handleCancel = () => {
         setIsEdit(false)
-        setIsEditBranch(false)
-    }
-
-    const handleBranch = () => {
-        setIsEditBranch(true)
-    }
-
-    const handleCancelBranch = () => {
-        setIsEditBranch(false)
     }
 
     return (
@@ -17,33 +8,90 @@ export default function EditComp({ setIsEdit, isEditBranch, setIsEditBranch }) {
             <div className="card-body fs-7 text-secondary">
                 <div className="d-flex mb-3">
                     <div className="col-6 my-auto">
-                        <div>Terminal Code</div>
+                        <div>Name</div>
                     </div>
                     <div className="col-6">
-                        <input className="form-control" placeholder="CPM" />
+                        <input className="form-control" placeholder="Britama Bisnis" />
                     </div>
                 </div>
                 <div className="d-flex mb-3">
                     <div className="col-6 my-auto">
-                        <div>Terminal Name</div>
+                        <div>Code</div>
                     </div>
                     <div className="col-6">
-                        <input className="form-control" placeholder="T001" />
+                        <input className="form-control" placeholder="Britama Bisnis" />
                     </div>
                 </div>
                 <div className="d-flex mb-3">
                     <div className="col-6 my-auto">
-                        <div>Branch</div>
+                        <div>Card Information</div>
                     </div>
                     <div className="col-6">
-                        {isEditBranch ? (
-                            <div className="d-flex">
-                                <input className="form-control me-1" placeholder="Lebak Bulus" />
-                                <div role="button" onClick={handleCancelBranch} className="btn btn-danger">Cancel</div>
-                            </div>
-                        ) : (
-                            <div role="button" onClick={handleBranch} className="btn btn-danger">Change Branch</div>
-                        )}
+                        <input className="form-control" placeholder="Card Information" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Tarik Tunai</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="20 juta" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Transfer Antar Bank</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="25 juta" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Transfer sesama BRI</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="100 juta" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>RTGS di Internet Banking</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="550 juta" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Pembayaran Tagihan</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="100 juta" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Setoran Awal</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="1 juta" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Biaya Kartu</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="25000" />
+                    </div>
+                </div>
+                <div className="d-flex mb-3">
+                    <div className="col-6 my-auto">
+                        <div>Card Image</div>
+                    </div>
+                    <div className="col-6">
+                        <input className="form-control" placeholder="" type="file" />
                     </div>
                 </div>
                 <div className="d-flex mb-3">
