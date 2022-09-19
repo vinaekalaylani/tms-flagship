@@ -8,7 +8,7 @@ export default function ReportingProcess({ handleSidebar }) {
     const [isFilter, setIsFilter] = useState(true)
     return (
         <div id="main">
-            <NavbarComp handleSidebar={handleSidebar} title="Reporting Process"/>
+            <NavbarComp handleSidebar={handleSidebar} title="Transaction"/>
             <div className="page-content">
                 <section>
                     {isFilter ? <FilterComp setIsFilter={setIsFilter}/> : <ReportingProcessComp/>}
